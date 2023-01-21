@@ -1,0 +1,11 @@
+.idea
+.vscode
+/nbproject
+.DS_Store
+node_modules
+www/data/settings.json
+www/data/offers.json
+www/data/google.json
+www/data/yandex.json
+www/config.php
+www/debug.log
