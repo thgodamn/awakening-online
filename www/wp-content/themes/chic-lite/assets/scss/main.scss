@@ -1,0 +1,75 @@
+.page-main {
+  background: #2F3038;
+  background-image: url('/wp-content/themes/chic-lite/images/bg.png');
+}
+
+.header {
+  &__logo {}
+  &__menu {}
+}
+
+.menu {
+  &__list {}
+  &__item {}
+}
+
+.button {}
+
+.banner {
+  &__row {}
+  &__left {}
+  &__right {}
+  &__text {}
+  &__subtext {}
+}
+
+.advantage {
+  &__list {}
+  &__item {}
+  &__image {}
+  &__text {}
+
+}
+
+.course {
+  &__list {}
+  &__item {}
+  &__image {}
+  &__text {}
+  &__button {}
+}
+
+.contact {
+  &__left {}
+  &__title {}
+  &__text {}
+  &__list {}
+  &__item {}
+  &__right {}
+  &__form {}
+  &__row {}
+  &__label {}
+  &__input {}
+  &__button {}
+}
+
+.project {
+  &__left {}
+  &__image {}
+  &__text {}
+  &__right {}
+  &__title {}
+  &__text {}
+}
+
+.footer {
+  &__menu {}
+  &__list {}
+  &__item {}
+  &__social {}
+}
+
+.social {
+  &__icon {}
+  &__text {}
+}
