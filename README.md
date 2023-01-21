@@ -1,7 +1,3 @@
-# Media Buying
-
-This is a personal Docker setup for Wordpress site.
-
 ## Requirement
 
 * [Docker](https://hub.docker.com/)
@@ -11,20 +7,20 @@ This is a personal Docker setup for Wordpress site.
 
 Write to hosts file
 ```
-#dev.xp-banks.ru
-127.0.0.1 dev.xp-banks.ru
+#awakening-online.ru
+127.0.0.1 dev.awakening-online.ru
 ```                    
 ```
-git clone https://gitlab.com/x574/dev/xp-banks.git
+git clone git@github.com:thgodamn/awakening-online.git
 cd <project-name>
 make up
 ```
 
 ## Links
 
-- gitlab:   https://gitlab.com/x574/dev/banks-trafficback.git
-- dev copy: http://dev.xp-banks.ru
-- database: http://dev.xp-banks.ru:8085
+- gitlab:   https://github.com/thgodamn/awakening-online
+- dev copy: http://dev.awakening-online.ru/
+- database: http://dev.awakening-online.ru/:8085
 
 ## Credentials
 
