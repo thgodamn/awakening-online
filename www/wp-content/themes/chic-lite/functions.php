@@ -42,6 +42,20 @@ function disable_checkout_fields( $fields ) {
 
 }
 
+//статус заказа "в обработке" и оплачен - переводим в выполнено
+add_filter( 'woocommerce_payment_complete_order_status', 'update_order_status', 10, 2 );
+
+function update_order_status( $order_status, $order_id ) {
+
+    $order = new WC_Order( $order_id );
+
+    if ( 'processing' == $order_status && 'pending' == $order->status  ) {
+        return 'completed';
+    }
+    return $order_status;
+
+}
+
 /**
  * Custom Functions.
  */
