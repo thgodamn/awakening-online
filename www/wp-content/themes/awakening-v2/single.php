@@ -10,23 +10,26 @@
 get_header(); ?>
 
 
-<?php
+<div class="single">
+    <div class="container">
+        <?php
 
-    while ( have_posts() ) : the_post();
-        var_dump($post);
+        while ( have_posts() ) : the_post();
 
-        if( is_singular() ||  ( get_post_format() != false ) ){
-            the_content();
-            wp_link_pages( array(
-                'before' => '<div class="page-links">',
-                'after'  => '</div>',
-            ) );
-        }else{
-            the_excerpt();
-        }
-    endwhile;
+            if( is_singular() ||  ( get_post_format() != false ) ){
+                the_content();
+                wp_link_pages( array(
+                    'before' => '<div class="page-links">',
+                    'after'  => '</div>',
+                ) );
+            }else{
+                the_excerpt();
+            }
+        endwhile;
 
-?>
+        ?>
+    </div>
+</div>
 
 
 <?php
