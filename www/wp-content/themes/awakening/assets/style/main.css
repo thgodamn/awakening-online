@@ -148,11 +148,12 @@ a:hover {
   position: absolute;
   background: #202027;
   z-index: 1;
-  margin-top: 280px;
   left: 0;
   padding: 20px 0;
   display: none;
   box-shadow: -1px 5px 15px rgba(0, 0, 0, 0.0901960784);
+  top: 0;
+  margin-top: 100px;
 }
 .menu__mobile.active {
   display: block;
@@ -195,6 +196,7 @@ a:hover {
   z-index: 100;
   cursor: pointer;
   -webkit-text-stroke: unset;
+  border: none;
 }
 .button[type=submit] {
   width: 100%;
@@ -286,7 +288,7 @@ a:hover {
 }
 @media (max-width: 768px) {
   .banner {
-    margin-top: 80px;
+    margin-top: 120px;
   }
   .banner__text {
     font-size: 28px;
@@ -315,11 +317,21 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
+.advantage__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  margin-right: 17px;
+}
 .advantage__image img {
-  max-width: 120px;
+  max-width: 90px;
+  max-height: 90px;
+  display: block;
 }
 .advantage__text {
   -webkit-text-stroke: 0.2px black;
+  min-width: 210px;
 }
 @media (max-width: 1440px) {
   .advantage__list {
@@ -394,6 +406,9 @@ a:hover {
   align-items: end;
   row-gap: 85px;
 }
+.contact__wrapper--center {
+  align-items: center;
+}
 .contact__box {
   background: #202027;
   padding: 24px 30px;
@@ -407,8 +422,15 @@ a:hover {
 }
 .contact__title img {
   border-radius: 50% !important;
-  max-width: 332px;
+  max-width: 270px;
   width: 100%;
+}
+.contact__title--image {
+  line-height: 50px;
+  margin-bottom: 40px;
+}
+.contact__title--image img {
+  width: 100px;
 }
 .contact__title span {
   font-weight: 700;
@@ -543,6 +565,9 @@ a:hover {
   display: flex;
   align-items: center;
 }
+.social__item img {
+  max-width: 35px;
+}
 @media (max-width: 768px) {
   .social {
     justify-content: center;
@@ -577,4 +602,13 @@ span.number {
   font-family: sans-serif;
   color: #fff;
   font-weight: 700;
+}
+
+.mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
 }
