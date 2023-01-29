@@ -510,6 +510,8 @@
 
     </footer>
 
+    <div class="bg"></div>
+
     <?php
         wp_footer();
     ?>
