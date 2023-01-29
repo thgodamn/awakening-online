@@ -206,7 +206,7 @@ a:hover {
 }
 .button:hover {
   color: #202027;
-  background: #c99a23;
+  background: #eac439;
 }
 
 .banner {
@@ -666,6 +666,17 @@ strong {
   }
 }
 
+.checkout_page {
+  background: #202027;
+  border: 1px solid #F9F7F7;
+  border-radius: 30px;
+  padding: 40px;
+  height: 100%;
+  outline: 0;
+  box-sizing: border-box;
+  margin-bottom: 60px;
+}
+
 .single {
   margin-bottom: 80px;
 }
@@ -690,8 +701,9 @@ strong {
   border: 1px solid #F9F7F7;
   border-radius: 30px;
   padding: 40px;
-  height: calc(100% - 80px);
+  height: 100%;
   outline: 0;
+  box-sizing: border-box;
 }
 @media (max-width: 768px) {
   .single {
@@ -723,4 +735,45 @@ strong {
   .text {
     font-size: 16px;
   }
+}
+
+.woocommerce {
+  margin-bottom: 40px;
+}
+.woocommerce-product-gallery__trigger, .woocommerce .product_meta, .woocommerce .quantity, .woocommerce .button[name=add-to-cart], .woocommerce #order_review_heading, .woocommerce .woocommerce-checkout-review-order-table .cart_item, .woocommerce .woocommerce-checkout-review-order-table .cart-subtotal, .woocommerce .woocommerce-checkout-review-order-table thead, .woocommerce .wc_payment_method, .woocommerce .woocommerce-terms-and-conditions-wrapper, .woocommerce h3, .woocommerce .woocommerce label, .woocommerce #tab-title-description, .woocommerce label[for=order_comments], .woocommerce .woocommerce-notices-wrapper,
+.woocommerce abbr {
+  display: none;
+}
+.woocommerce #sbw_wc-adding-button {
+  margin: 0;
+}
+.woocommerce #billing_email_field label {
+  display: block;
+}
+.woocommerce .woocommerce-Price-amount.amount {
+  font-size: 50px;
+}
+.woocommerce .single-product .product-type-simple {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 40px;
+}
+.woocommerce #order_comments {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.woocommerce input {
+  padding: 0.375rem 0.75rem;
+  width: 100%;
+  outline: 0;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.woocommerce .woocommerce-tabs.wc-tabs-wrapper {
+  grid-column: 2;
+  grid-row: 1;
+}
+.woocommerce .checkout_coupon {
+  margin-bottom: 10px;
 }
