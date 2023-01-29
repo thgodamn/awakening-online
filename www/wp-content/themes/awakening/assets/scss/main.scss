@@ -772,4 +772,7 @@ span {
   height: 100%;
   z-index: -1;
 
+  @media (max-width: 768px) {
+    background-size: 150%;
+  }
 }
