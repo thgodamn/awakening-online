@@ -50,7 +50,7 @@ add_action( 'wp_enqueue_scripts', 'sbw_wc_styles_connector' );
 function sbw_wc_add_buy_now_button_single()
 {
 	global $product;
-    printf( '<button id="sbw_wc-adding-button" type="submit" name="sbw-wc-buy-now" value="%d" class="single_add_to_cart_button buy_now_button button alt">%s</button>', $product->get_ID(), esc_html__( 'Buy Now', 'sbw-wc' ) );
+    printf( '<button id="sbw_wc-adding-button" type="submit" name="sbw-wc-buy-now" value="%d" class="single_add_to_cart_button buy_now_button button alt">%s</button>', $product->get_ID(), esc_html__( 'Купить', 'sbw-wc' ) );
 }
 
 add_action( 'woocommerce_after_add_to_cart_button', 'sbw_wc_add_buy_now_button_single' );
