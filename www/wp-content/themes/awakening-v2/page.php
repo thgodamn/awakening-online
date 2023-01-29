@@ -37,5 +37,5 @@ var_dump('PAGE PAGE');
 
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();
