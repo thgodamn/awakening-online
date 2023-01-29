@@ -25,33 +25,32 @@ get_header();
 	<div class="container">
 		<?php
 
-        var_dump('PAGE.PHP');
-
-		while ( have_posts() ) : the_post();
-			var_dump($post);
+        //если обычная страница
 
 
-			if( is_singular() || ( get_post_format() != false ) ){
-				the_content();
-				wp_link_pages( array(
-					'before' => '<div class="page-links">',
-					'after'  => '</div>',
-				) );
-			}else{
-				the_excerpt();
-			}
+        ?>
 
+        <div class="checkout_page">
+            <?php
+            if ( is_checkout() ) {
+                // страница оформления заказа
+                while ( have_posts() ) : the_post();
 
-		endwhile; // End of the loop.
-		?>
+                    if( is_singular() || ( get_post_format() != false ) ){
+                        the_content();
+                        wp_link_pages( array(
+                            'before' => '<div class="page-links">',
+                            'after'  => '</div>',
+                        ) );
+                    } else {
+                        the_excerpt();
+                    }
 
-        <?php echo do_shortcode('[coupon_code]'); ?>
+                endwhile; // End of the loop.
+            }
+            ?>
+        </div>
 
-        <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo get_home_url(); ?>/checkout/" enctype="multipart/form-data" novalidate="novalidate">
-            <input type="email" class="input-text " name="billing_email" id="billing_email" placeholder="" value="" autocomplete="email">
-            <textarea name="order_comments" class="input-text " id="order_comments" placeholder="Примечания к вашему заказу, например, особые пожелания отделу доставки." rows="2" cols="5"></textarea>
-            <button type="submit" class="button alt wp-element-button" name="woocommerce_checkout_place_order" id="place_order" value="Подтвердить заказ" data-value="Подтвердить заказ">Подтвердить заказ</button>
-        </form>
 	</div>
 </div>
 
