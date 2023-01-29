@@ -113,6 +113,10 @@ a:hover {
   justify-content: end;
 }
 
+.justify-right {
+  justify-content: right;
+}
+
 .header {
 
   background: $color-black-2;
@@ -189,11 +193,13 @@ a:hover {
     position: absolute;
     background: #202027;
     z-index: 1;
-    margin-top: 280px;
     left: 0;
     padding: 20px 0;
     display: none;
     box-shadow: -1px 5px 15px #00000017;
+
+    top: 0;
+    margin-top: 100px;
 
     &.active {
       display: block;
@@ -243,6 +249,7 @@ a:hover {
   z-index: 100;
   cursor: pointer;
   -webkit-text-stroke: unset;
+  border: none;
 
   &[type=submit] {
     width: 100%;
@@ -353,7 +360,7 @@ a:hover {
   }
 
   @media (max-width: 768px) {
-    margin-top: 80px;
+    margin-top: 120px;
     &__text {
       font-size: 28px;
       line-height: 45px;
@@ -384,12 +391,21 @@ a:hover {
     justify-content: center;
   }
   &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    margin-right: 17px;
+
     & img {
-      max-width: 120px;
+      max-width: 90px;
+      max-height: 90px;
+      display: block;
     }
   }
   &__text {
     -webkit-text-stroke: 0.2px black;
+    min-width: 210px;
   }
 
   @media (max-width: 1440px) {
@@ -472,6 +488,10 @@ a:hover {
     column-gap: 85px;
     align-items: end;
     row-gap: 85px;
+
+    &--center {
+      align-items: center;
+    }
   }
   &__box {
     background: $color-black-2;
@@ -486,8 +506,17 @@ a:hover {
 
     & img {
       border-radius: 50%!important;
-      max-width: 332px;
+      max-width: 270px;
       width: 100%;
+    }
+
+    &--image {
+      line-height: 50px;
+      margin-bottom: 40px;
+
+      & img {
+        width: 100px;
+      }
     }
 
     & span {
@@ -661,6 +690,10 @@ a:hover {
     margin-left: 40px;
     display: flex;
     align-items: center;
+
+    & img {
+      max-width: 35px;
+    }
   }
 
   @media (max-width: 768px) {
@@ -702,5 +735,13 @@ span {
     font-family: sans-serif;
     color: #fff;
     font-weight: 700;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
   }
 }

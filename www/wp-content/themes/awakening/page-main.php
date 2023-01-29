@@ -111,14 +111,14 @@
 
             <div class="banner__row banner__bottom">
 
-                <div class="banner__box banner__box--flex justify-end">
+                <div class="banner__box banner__box--flex justify-right">
                     <div class="banner__subtext banner__subtext banner__subtext--center banner__subtext--mr">Awakening курс </div>
                     <a class="banner__button button button__small" href="#">2850 рублей</a>
                 </div>
 
                 <div class="banner__box banner__box--flex justify-start">
                     <a class="banner__button button button__small" href="#">Подобрать</a>
-                    <!--<div class="banner__subtext banner__subtext banner__subtext--center banner__subtext--ml">Подберем курс в 1 клик!</div>-->
+                    <div class="banner__subtext banner__subtext banner__subtext--center banner__subtext--ml mobile">Подберем курс в 1 клик!</div>
                 </div>
 
             </div>
@@ -387,7 +387,10 @@
                 </div>
 
                 <div class="contact__col">
-                    <div class="contact__title">Пробуждение</div>
+                    <div class="contact__title contact__title--image">
+                        <img src="wp-content/themes/awakening/images/lotos.png">
+                        <div>Пробуждение</div>
+                    </div>
                     <div class="contact__box">
                         <div class="contact__text">
                             <span>Awakening</span><br>
@@ -409,7 +412,7 @@
     <section class="contact">
 
         <div class="container">
-            <div class="contact__wrapper">
+            <div class="contact__wrapper contact__wrapper--center">
 
                 <div class="contact__col">
                     <div class="contact__title">
@@ -491,12 +494,12 @@
 
                     <a href="#" class="social__item">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/instagram_icon.png" />
-                        <div class="social__text">instagram</div>
+                        <div class="social__text">Instagram</div>
                     </a>
 
                     <a href="#" class="social__item">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/youtube_icon.png" />
-                        <div class="social__text">youtube</div>
+                        <div class="social__text">YouTube</div>
                     </a>
 
                 </div>
