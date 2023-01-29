@@ -42,3 +42,25 @@ function update_order_status( $order_status, $order_id ) {
     return $order_status;
 
 }
+
+//в корзине только 1 товар
+add_filter( 'woocommerce_add_cart_item_data', '_empty_cart' );
+
+function _empty_cart( $cart_item_data ) {
+
+    WC()->cart->empty_cart();
+
+    return $cart_item_data;
+}
+
+//убрать стили woocommerce
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+//убрать похожие товары
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+//убрать lightbox на странице single-product у image
+function remove_product_image_link( $html ) {
+    return preg_replace( "!<(a|/a).*?>!", '', $html );
+}
+add_filter( 'woocommerce_single_product_image_thumbnail_html', 'remove_product_image_link', 10, 2 );

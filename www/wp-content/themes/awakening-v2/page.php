@@ -14,13 +14,14 @@
 
 get_header(); ?>
 
+
+<div class="page">
+	<div class="container">
 		<?php
-var_dump('PAGE PAGE');
 
 		while ( have_posts() ) : the_post();
 
-			var_dump($post);
-
+//			var_dump($post);
 			if( is_singular() || ( get_post_format() != false ) ){
 				the_content();
 				wp_link_pages( array(
@@ -34,6 +35,8 @@ var_dump('PAGE PAGE');
 
 		endwhile; // End of the loop.
 		?>
+	</div>
+</div>
 
 
 <?php

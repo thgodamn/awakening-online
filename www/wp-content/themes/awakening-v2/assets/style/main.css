@@ -659,3 +659,33 @@ span.number {
     background-size: 150%;
   }
 }
+
+.woocommerce-product-gallery__trigger,
+.woocommerce .product_meta,
+.woocommerce .quantity,
+.woocommerce .button[name=add-to-cart],
+.woocommerce #order_review_heading,
+.woocommerce .woocommerce-checkout-review-order-table,
+.woocommerce .wc_payment_method,
+.woocommerce .woocommerce-terms-and-conditions-wrapper,
+.woocommerce h3, .woocommerce label,
+.woocommerce #tab-title-description {
+  display: none;
+}
+
+#sbw_wc-adding-button {
+  margin: 0;
+}
+
+.woocommerce #billing_email_field label {
+  display: block;
+}
+
+.woocommerce .woocommerce-Price-amount.amount {
+  font-size: 50px;
+}
+
+.single-product .product-type-simple {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
