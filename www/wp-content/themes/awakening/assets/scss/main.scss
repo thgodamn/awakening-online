@@ -745,3 +745,11 @@ span {
     display: block;
   }
 }
+
+.desktop {
+  display: block;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

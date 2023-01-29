@@ -149,7 +149,7 @@ if( chic_lite_is_delicious_recipe_activated() ){
 /*my functions*/
 add_action( 'wp_head', 'ilc_favicon');
 function ilc_favicon(){
-    echo "<link rel='shortcut icon' href='" . get_stylesheet_directory_uri() . "/favicon.ico' />" . "\n";
+    echo "<link rel='shortcut icon' href='" . get_stylesheet_directory_uri() . "/images/favicon.png' />" . "\n";
 }
 
 /*delete dashboard from my accont*/
