@@ -64,3 +64,18 @@ function remove_product_image_link( $html ) {
     return preg_replace( "!<(a|/a).*?>!", '', $html );
 }
 add_filter( 'woocommerce_single_product_image_thumbnail_html', 'remove_product_image_link', 10, 2 );
+
+
+
+
+
+//add_action( 'woocommerce_before_calculate_totals', 'rudr_custom_price_refresh' );
+//function rudr_custom_price_refresh( $cart_object ) {
+//
+//    foreach ( $cart_object->get_cart() as $item ) {
+//        if( array_key_exists( 'misha_custom_price', $item ) ) {
+//            $item[ 'data' ]->set_price( $item[ 'misha_custom_price' ] );
+//        }
+//    }
+//
+//}
