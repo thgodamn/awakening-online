@@ -66,6 +66,12 @@
                     <div class="menu__item">
                         <a href="#">Оставить заявку</a>
                     </div>
+                    <div class="menu__item">
+                        <a href="#">О проекте</a>
+                    </div>
+                    <div class="menu__item">
+                        <a href="#">Контакты</a>
+                    </div>
                 </div>
             </div>
 
@@ -87,11 +93,11 @@
                     </div>
                 </div>
 
-                <div class="banner__box">
+                <div class="banner__box banner__box--right">
 
                     <div class="banner__text">
-                        Полный отказ от наркотиков
-                        Модернизируй свою личность
+                        Полный отказ от наркотиков<br>
+                        Модернизируй свою личность<br>
                         Под контролем основателя курса<br>
                         За 30 дней
                     </div>
@@ -106,13 +112,13 @@
             <div class="banner__row banner__bottom">
 
                 <div class="banner__box banner__box--flex justify-end">
-                    <div class="banner__subtext banner__subtext banner__subtext--center">Awakening курс </div>
+                    <div class="banner__subtext banner__subtext banner__subtext--center banner__subtext--mr">Awakening курс </div>
                     <a class="banner__button button button__small" href="#">2850 рублей</a>
                 </div>
 
                 <div class="banner__box banner__box--flex justify-start">
                     <a class="banner__button button button__small" href="#">Подобрать</a>
-                    <div class="banner__subtext banner__subtext banner__subtext--center banner__subtext--ml">Подберем курс в 1 клик!</div>
+                    <!--<div class="banner__subtext banner__subtext banner__subtext--center banner__subtext--ml">Подберем курс в 1 клик!</div>-->
                 </div>
 
             </div>
@@ -190,12 +196,15 @@
             <div class="course__list">
 
                 <div class="course__item">
+                    <div class="course__title">
+                        MENTOR
+                    </div>
                     <div class="course__image">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/course_mentor.png" />
                     </div>
                     <div class="course__text">
-                        Обучение:<br>
-                        Прохождение пути вместе с близким в роли наставника.<br>
+                        Обучение<span class="number">:</span><br>
+                        Прохождение пути вместе с близким в роли наставника<span class="number">.</span><br>
                         <span>Видео курс</span>
                     </div>
                     <div class="course__button">
@@ -204,12 +213,16 @@
                 </div>
 
                 <div class="course__item">
+                    <div class="course__title">
+                        AWAKENING
+                    </div>
                     <div class="course__image">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/course_awaking.png" />
                     </div>
                     <div class="course__text">
-                        Обучение:<br>
-                        Основа пробуждения, самостоятельная практика.<br>
+                        Обучение<span class="number">:</span><br>
+                        Основа пробуждения<span class="number">,</span><br>
+                        самостоятельная практика<span class="number">.</span><br>
                         <span>Видеокурс</span>
                     </div>
                     <div class="course__button">
@@ -218,13 +231,17 @@
                 </div>
 
                 <div class="course__item">
+                    <div class="course__title">
+                        CONTACT
+                    </div>
                     <div class="course__image">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/course_contact.png" />
                     </div>
                     <div class="course__text">
-                        Обучение:<br>
-                        Прохождение пути вместе с близким в роли наставника.<br>
-                        <span>Видеокурс</span>
+                        Введение в пробуждение<br>
+                        в тесном контакте<br>
+                        с основателем курса<br>
+                        <span class="number">30</span> дней
                     </div>
                     <div class="course__button">
                         <a class="button" href="#">Подать заявку</a>
@@ -232,13 +249,15 @@
                 </div>
 
                 <div class="course__item">
+                    <div class="course__title">
+                        CONNECTION
+                    </div>
                     <div class="course__image">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/course_connection.png" />
                     </div>
                     <div class="course__text">
-                        Обучение:<br>
-                        Прохождение пути вместе с близким в роли наставника.<br>
-                        <span>Видео курс</span>
+                        Введение в пробуждение<br>
+                        с основателем и специалистами проекта<br>
                     </div>
                     <div class="course__button">
                         <a class="button" href="#">Подать заявку</a>

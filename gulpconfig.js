@@ -1,5 +1,5 @@
 module.exports = {
     CONFIG: [
-        'chic-lite',   //theme
+        'awakening',   //theme
     ]
 };
