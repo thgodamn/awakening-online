@@ -93,6 +93,10 @@ a:hover {
   justify-content: end;
 }
 
+.justify-right {
+  justify-content: right;
+}
+
 .header {
   background: #202027;
   margin-bottom: 100px;

@@ -111,7 +111,7 @@
 
             <div class="banner__row banner__bottom">
 
-                <div class="banner__box banner__box--flex justify-end">
+                <div class="banner__box banner__box--flex justify-right">
                     <div class="banner__subtext banner__subtext banner__subtext--center banner__subtext--mr">Awakening курс </div>
                     <a class="banner__button button button__small" href="#">2850 рублей</a>
                 </div>
