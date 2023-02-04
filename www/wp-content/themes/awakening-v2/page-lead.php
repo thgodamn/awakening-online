@@ -39,7 +39,7 @@ get_header(); ?>
                     <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="" />
                 </div>
 
-                <a href="<?php get_field( "link", $post->ID ); ?>" class="button desktop">
+                <a href="<?php echo get_field( "link", $post->ID ); ?>" class="button desktop">
                     Подать заявку
                 </a>
 
@@ -51,7 +51,7 @@ get_header(); ?>
                 </div>
             </div>
 
-            <a href="<?php get_field( "link", $post->ID ); ?>" class="button mobile">
+            <a href="<?php echo get_field( "link", $post->ID ); ?>" class="button mobile">
                 Подать заявку
             </a>
 

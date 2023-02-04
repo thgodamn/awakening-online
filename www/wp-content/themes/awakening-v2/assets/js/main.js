@@ -40,4 +40,16 @@
         });
     }
 
+    $(window).resize(function(){
+        if ($('body').height() < window.outerHeight) {
+            $('.page').css('height',(window.outerHeight-390) + 'px');
+            $('.err404').css('height',(window.outerHeight-390) + 'px');
+        }
+    });
+
+    if ($('body').height() < window.outerHeight) {
+        $('.page').css('height',(window.outerHeight-390) + 'px');
+        $('.err404').css('height',(window.outerHeight-390) + 'px');
+    }
+
 })( jQuery );
