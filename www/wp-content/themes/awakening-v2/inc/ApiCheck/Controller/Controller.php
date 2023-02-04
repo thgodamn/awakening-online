@@ -4,6 +4,9 @@ require_once __DIR__.'/config.php';
 
 use ClassApi\AFSession;
 use ClassApi\Lead;
+use ClassApi\Form;
+use \Datetime;
+use \DateTimeZone;
 //use PHPMailer\PHPMailer\PHPMailer;
 //use PHPMailer\PHPMailer\SMTP;
 //use PHPMailer\PHPMailer\Exception;
@@ -50,6 +53,7 @@ class Controller
         $telegram = $params['telegram'];
         $afsession_id =  $this->getAFSession();
         $form_id = (isset($params['form_id'])) ? $params['form_id']: 1;
+        $form_name = (isset($params['form_name'])) ? $params['form_name']: 1;
 
         $wp_verify_nonce = false;
         if (!empty($params) && !isset( $params['form_contact_course_nonce'] ) && !wp_verify_nonce( $params['form_contact_course_nonce'], 'form_contact_course' )) {
@@ -68,13 +72,16 @@ class Controller
 
             $result = $wpdb->query( $wpdb->prepare($query));
 
+            $now = new DateTime( "now", new DateTimeZone( "Europe/Moscow" ) );
             $to = "info@awakening-online.ru";
             $subject = "Новый лид - $name $phone @$telegram";
             $message = "
+                <div style='margin-bottom: 20px;'>Форма: $form_name</div>
                 <div>Имя: $name,</div>
                 <div>Email: $email,</div>
                 <div>Телефон: $phone,</div>
                 <div>Телеграм: @$telegram,</div>
+                <div class='margin-top: 20px'>Дата (Москва): $now</div>
             ";
 
             wp_mail( $to, $subject, $message );

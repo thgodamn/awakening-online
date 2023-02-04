@@ -318,6 +318,9 @@
                             </div>
 
                             <?php wp_nonce_field( 'form_contact_course', 'form_contact_course_nonce' ); ?>
+                            <input type="hidden" name="form_id" value="1" />
+                            <input type="hidden" name="form_slug" value="form_course" />
+                            <input type="hidden" name="form_name" value="Подобрать курс" />
                         </form>
 
                     </div>
@@ -450,6 +453,9 @@
                             </div>
 
                             <?php wp_nonce_field( 'form_contact_lead', 'form_contact_lead_nonce' ); ?>
+                            <input type="hidden" name="form_id" value="2" />
+                            <input type="hidden" name="form_slug" value="form_lead" />
+                            <input type="hidden" name="form_name" value="Оставить заявку" />
                         </form>
 
                     </div>
