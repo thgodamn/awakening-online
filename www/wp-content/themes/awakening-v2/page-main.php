@@ -215,39 +215,43 @@
                     </div>
                 </a>
 
-                <a href="#contact__lead" class="course__item">
-                    <div class="course__title">
-                        CONTACT
-                    </div>
-                    <div class="course__image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/course_contact.png" />
-                    </div>
-                    <div class="course__text">
-                        Введение в пробуждение<br>
-                        в тесном контакте<br>
-                        с основателем курса<br>
-                        <span class="number">30</span> дней
-                    </div>
-                    <div class="course__button">
+                <div class="course__item">
+                    <a href="/contact">
+                        <div class="course__title">
+                            CONTACT
+                        </div>
+                        <div class="course__image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/course_contact.png" />
+                        </div>
+                        <div class="course__text">
+                            Введение в пробуждение<br>
+                            в тесном контакте<br>
+                            с основателем курса<br>
+                            <span class="number">30</span> дней
+                        </div>
+                    </a>
+                    <a href="#contact__lead" class="course__button">
                         <div class="button">Подать заявку</div>
-                    </div>
-                </a>
+                    </a>
+                </div>
 
-                <a href="#contact__lead" class="course__item">
-                    <div class="course__title">
-                        CONNECTION
-                    </div>
-                    <div class="course__image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/course_connection.png" />
-                    </div>
-                    <div class="course__text">
-                        Введение в пробуждение<br>
-                        с основателем и специалистами проекта<br>
-                    </div>
-                    <div class="course__button">
+                <div class="course__item">
+                    <a href="/connection">
+                        <div class="course__title">
+                            CONNECTION
+                        </div>
+                        <div class="course__image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/course_connection.png" />
+                        </div>
+                        <div class="course__text">
+                            Введение в пробуждение<br>
+                            с основателем и специалистами проекта<br>
+                        </div>
+                    </a>
+                    <a href="#contact__lead" class="course__button">
                         <div class="button">Подать заявку</div>
-                    </div>
-                </a>
+                    </a>
+                </div>
 
             </div>
 

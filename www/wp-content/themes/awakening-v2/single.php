@@ -11,6 +11,7 @@ get_header(); ?>
 
 
 <div class="single">
+    <div class="single__title course__title"><?php echo the_title(); ?></div>
     <div class="single__wrapper container">
         <?php
 //        while ( have_posts() ) : the_post();

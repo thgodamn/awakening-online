@@ -164,7 +164,7 @@ a:hover {
   display: none;
   box-shadow: -1px 5px 15px rgba(0, 0, 0, 0.0901960784);
   top: 0;
-  margin-top: 145px;
+  margin-top: 100px;
 }
 .menu__mobile.active {
   display: block;
