@@ -811,4 +811,7 @@ strong {
   #wp-toolbar {
     display: flex;
   }
+  .admin-bar .header__default .menu__mobile {
+    margin-top: 130px;
+  }
 }
