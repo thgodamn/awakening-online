@@ -23,7 +23,17 @@ $items = $order->get_items();
 
 if ($status == "completed") {
     foreach ( $items as $item_id => $item ) {
+
+        echo '<pre>';
+        var_dump($item_id);
+        echo '</pre>';
+
         $product_id = $item->get_product_id();
+
+        echo '<pre>';
+        var_dump($product_id);
+        echo '</pre>';
+
 
         //mentor
         if ( in_array( $item['product_id'], 13 ) ) {
