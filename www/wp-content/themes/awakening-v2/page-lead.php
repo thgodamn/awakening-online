@@ -39,12 +39,9 @@ get_header(); ?>
                     <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="" />
                 </div>
 
-<!--                <a href="--><?php
-//                $add_to_cart = do_shortcode('[add_to_cart_url id="'.$post->ID.'"]');
-//                echo '/checkout/'.$add_to_cart;
-//                ?><!--" class="button desktop">-->
-<!--                    --><?php //$product = wc_get_product( $post->ID ); echo $product->get_price(); ?><!-- рублей-->
-<!--                </a>-->
+                <a href="<?php get_field( "link", $post->ID ); ?>" class="button desktop">
+                    Подать заявку
+                </a>
 
             </div>
 
@@ -54,12 +51,9 @@ get_header(); ?>
                 </div>
             </div>
 
-<!--            <a href="--><?php
-//            $add_to_cart = do_shortcode('[add_to_cart_url id="'.$post->ID.'"]');
-//            echo '/checkout/'.$add_to_cart;
-//            ?><!--" class="button mobile">-->
-<!--                --><?php //$product = wc_get_product( $post->ID ); echo $product->get_price(); ?><!-- рублей-->
-<!--            </a>-->
+            <a href="<?php get_field( "link", $post->ID ); ?>" class="button mobile">
+                Подать заявку
+            </a>
 
 
         </div>
