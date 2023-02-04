@@ -955,7 +955,8 @@ strong {
   box-sizing: border-box;
   &__image {
     display: block;
-    margin: 140px auto;
+    //margin: 140px auto;
+    margin: 0 auto;
     width: 100%;
     max-width: 800px;
 
