@@ -52,4 +52,12 @@
         $('.err404').css('height',(window.outerHeight-390) + 'px');
     }
 
+    $(window).scroll(function () {
+        if ($('.header__default').offset().top < $(window).scrollTop()) {
+            $('.header__fixed').attr('style','display: block;');
+        } else {
+            $('.header__fixed').attr('style','display: none;');
+        }
+    });
+
 })( jQuery );
