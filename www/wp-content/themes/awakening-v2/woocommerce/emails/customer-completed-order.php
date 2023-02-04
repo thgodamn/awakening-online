@@ -8,7 +8,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-echo $email_heading . "\n\n";
+//echo $email_heading . "\n\n";
 
 $status = $order->get_status();
 $items = $order->get_items();
@@ -112,7 +112,7 @@ if ($status == "completed") {
                     <a href="https://youtu.be/0-33A019op8">https://youtu.be/0-33A019op8</a><br>
                     Экзамен <a href="https://youtu.be/dcmUGJmF0vE">https://youtu.be/dcmUGJmF0vE</a><br>
                     Медитация <a href="https://youtu.be/o2JnpWqWnmU">https://youtu.be/o2JnpWqWnmU</a><br>
-                    По всем вопросам обращайтесь в телегам <a href="https://t.me/awaken_supp">@awaken_supp</a><br>
+                    По всем вопросам обращайтесь в телеграм <a href="https://t.me/awaken_supp">@awaken_supp</a><br>
                     Удачного пути к пробуждению.<br>
                 </div>
             </div>
@@ -206,7 +206,7 @@ if ($status == "completed") {
                     Благодарим вас за покупку курса «Awakening».<br>
                     Ссылка для просмотра курса <a href="https://youtu.be/Vm7HBz0WRgg">https://youtu.be/Vm7HBz0WRgg</a><br>
                     Медитация <a href="https://youtu.be/o2JnpWqWnmU">https://youtu.be/o2JnpWqWnmU</a><br>
-                    По всем вопросам обращайтесь в телегам <a href="https://t.me/awaken_supp">@awaken_supp</a><br>
+                    По всем вопросам обращайтесь в телеграм <a href="https://t.me/awaken_supp">@awaken_supp</a><br>
                     Удачного пути к пробуждению.<br>
                 </div>
             </div>
