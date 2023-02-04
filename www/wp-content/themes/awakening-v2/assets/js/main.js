@@ -10,9 +10,15 @@
         }
     });
 
-    $('.menu__mobile .menu__item').click(function (){
-        $('.menu__toggle ').removeClass('active');
-        $('.menu__mobile  ').removeClass('active');
+    $('.menu__mobile .menu__item a').each(function (){
+        $(this).click(function () {
+            $('.header__toggle').each(function (){
+                $(this).removeClass('active');
+            });
+            $('.header__menu').each(function (){
+                $(this).removeClass('active');
+            });
+        });
     });
 
     //send lead
