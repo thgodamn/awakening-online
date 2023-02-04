@@ -125,6 +125,18 @@ a:hover {
     height: 45px;
   }
 }
+.header__fixed {
+  position: fixed;
+  display: none;
+}
+.header__fixed .menu__mobile {
+  margin-top: 100px;
+}
+@media (min-width: 769px) {
+  .header__fixed {
+    display: none !important;
+  }
+}
 
 .menu__list {
   display: flex;

@@ -11,7 +11,7 @@
 
 <body <?php #body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
-<header class="header">
+<header class="header header__default">
 
     <div class="header__wrapper container">
 
@@ -30,6 +30,38 @@
                     <a href="#contact__lead">Оставить заявку</a>
                 </div>
             </div>
+        </div>
+
+        <div class="header__toggle menu__toggle"></div>
+        <div class="header__menu menu menu__mobile">
+            <div class="menu__list">
+                <div class="menu__item">
+                    <a href="/donate">Пожертвовать</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#contact__lead">Оставить заявку</a>
+                </div>
+                <div class="menu__item">
+                    <a href="#contact__ray">О проекте</a>
+                </div>
+                <div class="menu__item">
+                    <a class="js-modal-contact" href="#">Контакты</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+<header class="header header__fixed">
+
+    <div class="header__wrapper container">
+
+        <div class="header__logo">
+            <a href="/">
+                <img src="https://awakening-online.ru/wp-content/themes/awakening-v2/images/logo.png">
+            </a>
         </div>
 
         <div class="header__toggle menu__toggle"></div>

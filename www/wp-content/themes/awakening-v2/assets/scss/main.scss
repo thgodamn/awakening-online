@@ -168,6 +168,19 @@ a:hover {
       }
     }
   }
+
+  &__fixed {
+    position: fixed;
+    display: none;
+
+    & .menu__mobile {
+      margin-top: 100px;
+    }
+
+    @media (min-width: 769px) {
+      display: none!important;
+    }
+  }
 }
 
 .menu {
