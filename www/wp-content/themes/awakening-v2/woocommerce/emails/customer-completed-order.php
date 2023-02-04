@@ -10,33 +10,37 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 echo $email_heading . "\n\n";
 
-echo '-----------------------------------------------------------------<br><br>';
 $status = $order->get_status();
 $items = $order->get_items();
 
 echo '<pre>';
 var_dump($status);
 echo '</pre>';
-echo '-----------------------------------------------------------------<br><br>';
+echo '------------------------------------------------------<br><br>';
 echo '<pre>';
 var_dump($items);
 echo '</pre>';
-echo '-----------------------------------------------------------------<br><br>';
-echo '<pre>';
-var_dump($items[1]->get_product());
-echo '</pre>';
 
+$i = 0;
 if ($status == "completed") {
     foreach ( $items as $item_id => $item ) {
+
+        echo "-----------------$i--------------------";
+        $i++;
 
         echo '<pre>';
         var_dump($item_id);
         echo '</pre>';
 
-        $product_id = $item->get_product();
+        $product_id = $item->get_product_id();
+        $product = $item->get_product();
 
         echo '<pre>';
         var_dump($product_id);
+        echo '</pre>';
+
+        echo '<pre>';
+        var_dump($product);
         echo '</pre>';
 
 
