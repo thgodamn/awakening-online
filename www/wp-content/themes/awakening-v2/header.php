@@ -9,7 +9,7 @@
     <meta name='robots' content='max-image-preview:large' />
 </head>
 
-<body <?php #body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
 <header class="header header__default">
 
