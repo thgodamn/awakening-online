@@ -1,0 +1,16 @@
+{
+    "name": "root/api-check",
+    "authors": [
+        {
+            "name": "wodby",
+            "email": "wodby@example.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ClassApi\\": "ClassApi",
+            "PHPMailer\\": "PHPMailer"
+        }
+    }
+}

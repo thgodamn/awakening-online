@@ -361,7 +361,7 @@ a:hover {
   margin: 0 auto;
 }
 .course__image {
-  margin-bottom: 85px;
+  margin-bottom: 35px;
 }
 .course__title {
   font-weight: 600;
@@ -370,6 +370,7 @@ a:hover {
   text-align: center;
   color: #fff;
   margin-bottom: 30px;
+  -webkit-text-stroke: 0 black;
 }
 .course__text {
   font-weight: 600;
@@ -605,6 +606,15 @@ span.number {
   font-weight: 700;
 }
 
+.laptop {
+  display: none;
+}
+@media (max-width: 1440px) {
+  .laptop {
+    display: block;
+  }
+}
+
 .mobile {
   display: none;
 }
@@ -619,6 +629,15 @@ span.number {
 }
 @media (max-width: 768px) {
   .desktop {
+    display: none;
+  }
+}
+
+.desktop_l {
+  display: block;
+}
+@media (max-width: 1440px) {
+  .desktop_l {
     display: none;
   }
 }

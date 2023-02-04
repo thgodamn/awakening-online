@@ -25,10 +25,10 @@
         <div class="header__menu menu">
             <div class="menu__list">
                 <div class="menu__item">
-                    <a href="#">Пожертвовать</a>
+                    <a href="/donate">Пожертвовать</a>
                 </div>
                 <div class="menu__item">
-                    <a href="#">Оставить заявку</a>
+                    <a href="#contact__lead">Оставить заявку</a>
                 </div>
             </div>
         </div>
@@ -37,16 +37,16 @@
         <div class="header__menu menu menu__mobile">
             <div class="menu__list">
                 <div class="menu__item">
-                    <a href="#">Пожертвовать</a>
+                    <a href="/donate">Пожертвовать</a>
                 </div>
                 <div class="menu__item">
-                    <a href="#">Оставить заявку</a>
+                    <a href="#contact__lead">Оставить заявку</a>
                 </div>
                 <div class="menu__item">
-                    <a href="#">О проекте</a>
+                    <a href="#contact__ray">О проекте</a>
                 </div>
                 <div class="menu__item">
-                    <a href="#">Контакты</a>
+                    <a class="js-modal-contact" href="#">Контакты</a>
                 </div>
             </div>
         </div>

@@ -1,5 +1,11 @@
 <?php
 
+//require_once 'inc/assets.php';
+//require_once 'inc/post_type.php';
+
+require_once __DIR__ . '/inc/ApiCheck/vendor/autoload.php';
+require_once get_template_directory().'/inc/ApiCheck/Controller/Controller.php';
+
 add_action('wp_enqueue_scripts', function() {
     wp_enqueue_script('script', get_stylesheet_directory_uri() . '/assets/js/main.js',array('jquery'), '1.0.0', 'all');
     wp_enqueue_style('styles', get_stylesheet_directory_uri() . '/assets/style/main.css',array(), '1.0.0', 'all');
@@ -66,6 +72,50 @@ function remove_product_image_link( $html ) {
 add_filter( 'woocommerce_single_product_image_thumbnail_html', 'remove_product_image_link', 10, 2 );
 
 
+
+//add REST - route
+add_action( 'rest_api_init', 'register_api_route' );
+function register_api_route() {
+    register_rest_route( 'v1', 'post/lead', array(
+            'methods' => 'POST',
+            'callback' => 'postLead',
+        )
+    );
+}
+
+add_action( 'phpmailer_init', 'send_smtp_email' );
+function send_smtp_email( $phpmailer ) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host       = 'smtp.timeweb.ru';
+    $phpmailer->CharSet    = 'UTF-8';
+    $phpmailer->Port       = '465';
+    $phpmailer->SMTPSecure = 'ssl';
+    $phpmailer->SMTPAuth   = true;
+    $phpmailer->Username   = 'info@awakening-online.ru';
+    $phpmailer->Password   = 'c8usWHCY';
+    $phpmailer->From       = 'info@awakening-online.ru';
+    $phpmailer->FromName   = 'Awakening';
+    $phpmailer->isHTML( true );
+    $phpmailer->addReplyTo('info@awakening-online.ru', 'Awakening');
+}
+
+//REST post form
+function postLead(WP_REST_Request $request) {
+    $controller = new Controller();
+    $params = $request->get_params();
+    debug_logg($params);
+    return $controller->postLead($params);
+}
+
+function debug_logg($value)
+{
+    $h = fopen("{$_SERVER['DOCUMENT_ROOT']}/debugg.log", 'a');
+    ob_start();
+    var_dump($value);
+    fwrite($h, ob_get_clean());
+    fwrite($h, "---------------------------------\n");
+    fclose($h);
+}
 
 
 

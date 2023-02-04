@@ -1,73 +1,70 @@
-<!DOCTYPE html>
-
 <?php /* Template Name: page-main */ ?>
 
+<!--<!DOCTYPE html>-->
+
+<!---->
+<!--<html>-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>awakening-online.ru</title>-->
+<!--    <meta name="description" content="awakening-online description">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!---->
+<!--    <meta name='robots' content='max-image-preview:large' />-->
+<!---->
+<!--    --><?php
+//        wp_head();
+//    ?>
+<!---->
+<!--</head>-->
+<!---->
+<!--<body class="page-main">-->
+
+<?php get_header(); ?>
 
 
-
-
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>awakening-online.ru</title>
-    <meta name="description" content="awakening-online description">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name='robots' content='max-image-preview:large' />
-
-    <?php
-        wp_head();
-    ?>
-
-</head>
-
-<body class="page-main">
-
-
-    <header class="header">
-
-        <div class="header__wrapper container">
-
-            <div class="header__logo">
-                <a href="/">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" />
-                </a>
-            </div>
-
-            <div class="header__menu menu">
-                <div class="menu__list">
-                    <div class="menu__item">
-                        <a href="#">Пожертвовать</a>
-                    </div>
-                    <div class="menu__item">
-                        <a href="#">Оставить заявку</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="header__toggle menu__toggle"></div>
-            <div class="header__menu menu menu__mobile">
-                <div class="menu__list">
-                    <div class="menu__item">
-                        <a href="#">Пожертвовать</a>
-                    </div>
-                    <div class="menu__item">
-                        <a href="#">Оставить заявку</a>
-                    </div>
-                    <div class="menu__item">
-                        <a href="#">О проекте</a>
-                    </div>
-                    <div class="menu__item">
-                        <a href="#">Контакты</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </header>
-
-
+<!--    <header class="header">-->
+<!---->
+<!--        <div class="header__wrapper container">-->
+<!---->
+<!--            <div class="header__logo">-->
+<!--                <a href="/">-->
+<!--                    <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/logo.png" />-->
+<!--                </a>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="header__menu menu">-->
+<!--                <div class="menu__list">-->
+<!--                    <div class="menu__item">-->
+<!--                        <a href="/donate">Пожертвовать</a>-->
+<!--                    </div>-->
+<!--                    <div class="menu__item">-->
+<!--                        <a href="#contact__lead">Оставить заявку</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="header__toggle menu__toggle"></div>-->
+<!--            <div class="header__menu menu menu__mobile">-->
+<!--                <div class="menu__list">-->
+<!--                    <div class="menu__item">-->
+<!--                        <a href="/donate">Пожертвовать</a>-->
+<!--                    </div>-->
+<!--                    <div class="menu__item">-->
+<!--                        <a href="#contact__lead">Оставить заявку</a>-->
+<!--                    </div>-->
+<!--                    <div class="menu__item">-->
+<!--                        <a href="#contact__ray">О проекте</a>-->
+<!--                    </div>-->
+<!--                    <div class="menu__item">-->
+<!--                        <a class="js-modal-contact" href="#">Контакты</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--        </div>-->
+<!---->
+<!--    </header>-->
 
     <section class="banner">
 
@@ -101,11 +98,11 @@
 
                 <div class="banner__box banner__box--flex justify-right">
                     <div class="banner__subtext banner__subtext banner__subtext--center banner__subtext--mr">Awakening курс </div>
-                    <a class="banner__button button button__small" href="#">2850 рублей</a>
+                    <a class="banner__button button button__small" href="/product/awakening/">2850 рублей</a>
                 </div>
 
                 <div class="banner__box banner__box--flex justify-start">
-                    <a class="banner__button button button__small" href="#">Подобрать</a>
+                    <a class="banner__button button button__small" href="#contact__course">Подобрать</a>
                     <div class="banner__subtext banner__subtext banner__subtext--center banner__subtext--ml laptop">Подберем курс в 1 клик!</div>
                 </div>
 
@@ -183,7 +180,7 @@
 
             <div class="course__list">
 
-                <a href="#" class="course__item">
+                <a href="/product/mentro/" class="course__item">
                     <div class="course__title">
                         MENTOR
                     </div>
@@ -200,7 +197,7 @@
                     </div>
                 </a>
 
-                <a href="#" class="course__item">
+                <a href="/product/awakening/" class="course__item">
                     <div class="course__title">
                         AWAKENING
                     </div>
@@ -218,7 +215,7 @@
                     </div>
                 </a>
 
-                <a href="#" class="course__item">
+                <a href="#contact__lead" class="course__item">
                     <div class="course__title">
                         CONTACT
                     </div>
@@ -236,7 +233,7 @@
                     </div>
                 </a>
 
-                <a href="#" class="course__item">
+                <a href="#contact__lead" class="course__item">
                     <div class="course__title">
                         CONNECTION
                     </div>
@@ -260,7 +257,7 @@
 
 
 
-    <section class="contact">
+    <section class="contact" id="contact__course">
 
         <div class="container">
             <div class="contact__wrapper">
@@ -286,39 +283,41 @@
                 <div class="contact__col">
                     <div class="contact__box">
 
-                        <form class="contact__form">
+                        <form class="contact__form js-form" method="POST">
 
                             <div class="contact__row">
                                 <div class="contact__label">Имя</div>
                                 <div class="contact__input">
-                                    <input type="text">
+                                    <input name="name" type="text">
                                 </div>
                             </div>
 
                             <div class="contact__row">
                                 <div class="contact__label">Телефон</div>
                                 <div class="contact__input">
-                                    <input type="text">
+                                    <input name="phone" type="text">
                                 </div>
                             </div>
 
                             <div class="contact__row">
                                 <div class="contact__label">Почта</div>
                                 <div class="contact__input">
-                                    <input type="text">
+                                    <input name="email" type="text">
                                 </div>
                             </div>
 
                             <div class="contact__row">
                                 <div class="contact__label">Телеграм: @</div>
                                 <div class="contact__input">
-                                    <input type="text">
+                                    <input name="telegram" type="text">
                                 </div>
                             </div>
 
                             <div class="contact__button">
                                 <input class="button" type="submit" value="Подобрать">
                             </div>
+
+                            <?php wp_nonce_field( 'form_contact_course', 'form_contact_course_nonce' ); ?>
                         </form>
 
                     </div>
@@ -359,7 +358,7 @@
 <!--        </div>-->
 <!--    </section>-->
 
-    <section class="contact contact__ray">
+    <section class="contact contact__ray" id="contact__ray">
 
         <div class="container">
             <div class="contact__wrapper">
@@ -397,7 +396,7 @@
 
 
 
-    <section class="contact">
+    <section class="contact" id="contact__lead">
 
         <div class="container">
             <div class="contact__wrapper contact__wrapper--center">
@@ -416,39 +415,41 @@
                 <div class="contact__col">
                     <div class="contact__box">
 
-                        <form class="contact__form">
+                        <form class="contact__form js-form" method="POST">
 
                             <div class="contact__row">
                                 <div class="contact__label">Имя</div>
                                 <div class="contact__input">
-                                    <input type="text">
+                                    <input name="name" type="text">
                                 </div>
                             </div>
 
                             <div class="contact__row">
                                 <div class="contact__label">Телефон</div>
                                 <div class="contact__input">
-                                    <input type="text">
+                                    <input name="phone" type="text">
                                 </div>
                             </div>
 
                             <div class="contact__row">
                                 <div class="contact__label">Почта</div>
                                 <div class="contact__input">
-                                    <input type="text">
+                                    <input name="email" type="text">
                                 </div>
                             </div>
 
                             <div class="contact__row">
                                 <div class="contact__label">Телеграм: @</div>
                                 <div class="contact__input">
-                                    <input type="text">
+                                    <input name="telegram" type="text">
                                 </div>
                             </div>
 
                             <div class="contact__button">
                                 <input class="button" type="submit" value="Оставить заявку">
                             </div>
+
+                            <?php wp_nonce_field( 'form_contact_lead', 'form_contact_lead_nonce' ); ?>
                         </form>
 
                     </div>
@@ -461,49 +462,50 @@
 
 
 
-    <footer class="footer">
+<!--    <footer class="footer">-->
+<!---->
+<!--        <div class="container">-->
+<!---->
+<!--            <div class="footer__wrapper">-->
+<!---->
+<!--                <div class="footer__menu menu">-->
+<!--                    <div class="menu__list">-->
+<!--                        <div class="menu__item">-->
+<!--                            <a href="#">О проекте</a>-->
+<!--                        </div>-->
+<!--                        <div class="menu__item">-->
+<!--                            <a href="#">Контакты</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="footer__social social">-->
+<!---->
+<!--                    <a href="#" class="social__item">-->
+<!--                        <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/instagram_icon.png" />-->
+<!--                        <div class="social__text">Instagram</div>-->
+<!--                    </a>-->
+<!---->
+<!--                    <a href="#" class="social__item">-->
+<!--                        <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/youtube_icon.png" />-->
+<!--                        <div class="social__text">YouTube</div>-->
+<!--                    </a>-->
+<!---->
+<!--                </div>-->
+<!---->
+<!--            </div>-->
+<!---->
+<!--        </div>-->
+<!---->
+<!--    </footer>-->
 
-        <div class="container">
-
-            <div class="footer__wrapper">
-
-                <div class="footer__menu menu">
-                    <div class="menu__list">
-                        <div class="menu__item">
-                            <a href="#">О проекте</a>
-                        </div>
-                        <div class="menu__item">
-                            <a href="#">Контакты</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="footer__social social">
-
-                    <a href="#" class="social__item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/instagram_icon.png" />
-                        <div class="social__text">Instagram</div>
-                    </a>
-
-                    <a href="#" class="social__item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/youtube_icon.png" />
-                        <div class="social__text">YouTube</div>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </footer>
-
-    <div class="bg"></div>
+<!--    <div class="bg"></div>-->
 
     <?php
+        get_footer();
         wp_footer();
     ?>
 
-</body>
+<!--</body>-->
 
-</html>
+<!--</html>-->
