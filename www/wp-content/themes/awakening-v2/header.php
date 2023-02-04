@@ -23,11 +23,11 @@
 
         <div class="header__menu menu">
             <div class="menu__list">
+<!--                <div class="menu__item">-->
+<!--                    <a href="/donate">Пожертвовать</a>-->
+<!--                </div>-->
                 <div class="menu__item">
-                    <a href="/donate">Пожертвовать</a>
-                </div>
-                <div class="menu__item">
-                    <a href="#contact__lead">Оставить заявку</a>
+                    <a class="homepage" href="#contact__lead">Оставить заявку</a>
                 </div>
             </div>
         </div>
@@ -35,14 +35,14 @@
         <div class="header__toggle menu__toggle"></div>
         <div class="header__menu menu menu__mobile">
             <div class="menu__list">
+<!--                <div class="menu__item">-->
+<!--                    <a href="/donate">Пожертвовать</a>-->
+<!--                </div>-->
                 <div class="menu__item">
-                    <a href="/donate">Пожертвовать</a>
+                    <a class="homepage" href="#contact__lead">Оставить заявку</a>
                 </div>
                 <div class="menu__item">
-                    <a href="#contact__lead">Оставить заявку</a>
-                </div>
-                <div class="menu__item">
-                    <a href="#contact__ray">О проекте</a>
+                    <a class="homepage" href="#contact__ray">О проекте</a>
                 </div>
                 <div class="menu__item">
                     <a class="js-modal-contact" href="#">Контакты</a>
@@ -67,14 +67,14 @@
         <div class="header__toggle menu__toggle"></div>
         <div class="header__menu menu menu__mobile">
             <div class="menu__list">
+<!--                <div class="menu__item">-->
+<!--                    <a href="/donate">Пожертвовать</a>-->
+<!--                </div>-->
                 <div class="menu__item">
-                    <a href="/donate">Пожертвовать</a>
+                    <a class="homepage" href="#contact__lead">Оставить заявку</a>
                 </div>
                 <div class="menu__item">
-                    <a href="#contact__lead">Оставить заявку</a>
-                </div>
-                <div class="menu__item">
-                    <a href="#contact__ray">О проекте</a>
+                    <a class="homepage" href="#contact__ray">О проекте</a>
                 </div>
                 <div class="menu__item">
                     <a class="js-modal-contact" href="#">Контакты</a>

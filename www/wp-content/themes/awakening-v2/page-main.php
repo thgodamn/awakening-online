@@ -190,7 +190,7 @@
                     <div class="course__text">
                         Обучение<span class="number">:</span><br>
                         Прохождение пути вместе с близким в роли наставника<span class="number">.</span><br>
-                        <span>Видео курс</span>
+                        <span>Видеокурс</span>
                     </div>
                     <div class="course__button">
                         <div class="button">3890 рублей</div>
