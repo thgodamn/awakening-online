@@ -1,10 +1,9 @@
 <?php
+require_once __DIR__ . '/inc/ApiCheck/vendor/autoload.php';
+require_once get_template_directory().'/inc/ApiCheck/Controller/Controller.php';
 
 //require_once 'inc/assets.php';
 //require_once 'inc/post_type.php';
-
-require_once __DIR__ . '/inc/ApiCheck/vendor/autoload.php';
-require_once get_template_directory().'/inc/ApiCheck/Controller/Controller.php';
 
 add_action('wp_enqueue_scripts', function() {
     wp_enqueue_script('script', get_stylesheet_directory_uri() . '/assets/js/main.js',array('jquery'), '1.0.0', 'all');

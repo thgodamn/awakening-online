@@ -11,30 +11,30 @@
  *
  * @package Chic_Lite
  */
+$host  = $_SERVER['HTTP_HOST'];
+error_reporting(0);
 
 get_header(); ?>
-
-
-	<?php
-var_dump('INDEX INDEX');
+<?php
 
 	if ( have_posts() ) :
 
-		/* Start the Loop */
 		while ( have_posts() ) : the_post();
-
-//			var_dump($post);
-
+			var_dump($post);
 		endwhile;
 
 	else :
 
-//		var_dump('PLOHO');
-
-	endif; ?>
+		header("HTTP/1.0 404 Not Found");
+	?>
+	<div class="err404">
+        <img class="err404__image" src="<?php echo get_template_directory_uri().'/images/404.png'; ?>" />
+    </div>
+<?php endif; ?>
 
 
 <?php
 //get_sidebar();
-wp_footer();
 get_footer();
+wp_footer();
+
