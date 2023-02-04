@@ -180,7 +180,7 @@
 
             <div class="course__list">
 
-                <a href="/product/mentro/" class="course__item">
+                <a href="/product/mentor/" class="course__item">
                     <div class="course__title">
                         MENTOR
                     </div>
