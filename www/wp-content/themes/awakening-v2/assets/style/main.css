@@ -95,7 +95,7 @@ a:hover {
 
 .header {
   background: #202027;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   height: 100px;
 }
 .header__wrapper {
@@ -123,6 +123,7 @@ a:hover {
   }
   .header__logo img {
     height: 45px;
+    margin-bottom: 10px;
   }
 }
 .header__fixed {
@@ -718,7 +719,6 @@ strong {
 }
 @media (max-width: 768px) {
   .single {
-    margin-top: 140px;
     margin-bottom: 100px;
   }
   .single__wrapper {
