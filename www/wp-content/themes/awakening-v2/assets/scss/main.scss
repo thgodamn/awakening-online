@@ -48,6 +48,7 @@ $color-gray: #837F7F;
 body {
   font-size: 16px;
   color: $color-white;
+  //position: relative;
 
   //background: #2F3038;
   //background-image: url('/wp-content/themes/awakening/images/bg.png');
@@ -485,7 +486,7 @@ a:hover {
 }
 
 .contact {
-  margin-bottom: 140px;
+  padding-bottom: 160px;
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -653,6 +654,9 @@ a:hover {
   //padding: 20px 0;
   display: flex;
   align-items: center;
+  //position: absolute;
+  //width: 100%;
+  //bottom: 0;
   &__menu {}
   &__list {}
   &__item {
@@ -943,4 +947,22 @@ strong {
 
   margin-bottom: 40px;
 
+}
+
+.err404 {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  &__image {
+    display: block;
+    margin: 140px auto;
+    width: 100%;
+    max-width: 800px;
+
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+  }
 }

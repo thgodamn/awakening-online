@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head itemscope itemtype="http://schema.org/WebSite">
     <?php wp_head(); ?>

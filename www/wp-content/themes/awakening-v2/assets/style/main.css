@@ -399,7 +399,7 @@ a:hover {
 }
 
 .contact {
-  margin-bottom: 140px;
+  padding-bottom: 160px;
 }
 .contact__wrapper {
   display: grid;
@@ -776,4 +776,22 @@ strong {
 }
 .woocommerce .checkout_coupon {
   margin-bottom: 10px;
+}
+
+.err404 {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+.err404__image {
+  display: block;
+  margin: 140px auto;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .err404__image {
+    padding: 0 20px;
+  }
 }
