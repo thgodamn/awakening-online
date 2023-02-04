@@ -440,7 +440,7 @@ a:hover {
     margin: 0 auto;
   }
   &__image {
-    margin-bottom: 85px;
+    margin-bottom: 35px;
   }
   &__title {
     font-weight: 600;
@@ -449,6 +449,7 @@ a:hover {
     text-align: center;
     color: #fff;
     margin-bottom: 30px;
+    -webkit-text-stroke: 0 black;
   }
   &__text {
     font-weight: 600;
@@ -741,6 +742,14 @@ span {
   }
 }
 
+.laptop {
+  display: none;
+
+  @media (max-width: 1440px) {
+    display: block;
+  }
+}
+
 .mobile {
   display: none;
 
@@ -753,6 +762,14 @@ span {
   display: block;
 
   @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.desktop_l {
+  display: block;
+
+  @media (max-width: 1440px) {
     display: none;
   }
 }

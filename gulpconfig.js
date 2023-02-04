@@ -1,5 +1,6 @@
 module.exports = {
     CONFIG: [
-        'awakening',   //theme
+        // 'awakening',
+        'awakening-v2',
     ]
 };
