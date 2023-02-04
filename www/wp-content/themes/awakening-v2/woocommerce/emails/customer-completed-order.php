@@ -13,16 +13,16 @@ echo $email_heading . "\n\n";
 $status = $order->get_status();
 $items = $order->get_items();
 
-echo '<pre>';
-var_dump($status);
-echo '</pre>';
-
-echo '<pre>';
-var_dump($items);
-echo '</pre>';
+//echo '<pre>';
+//var_dump($status);
+//echo '</pre>';
+//
+//echo '<pre>';
+//var_dump($items);
+//echo '</pre>';
 
 if ($status == "completed") {
-    foreach ( items as $item_id => $item ) {
+    foreach ( $items as $item_id => $item ) {
         $product_id = $item->get_product_id();
 
         //mentor
