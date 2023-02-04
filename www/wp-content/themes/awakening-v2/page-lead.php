@@ -51,7 +51,7 @@ get_header(); ?>
                 </div>
             </div>
 
-            <a href="<?php get_field( "link", $post->ID ); ?>" class="button mobile">
+            <a href="<?php echo get_field( "link", $post->ID ); ?>" class="button mobile">
                 Подать заявку
             </a>
 
