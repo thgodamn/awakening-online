@@ -113,7 +113,6 @@ a:hover {
     background: #202027;
     margin-bottom: 100px;
     z-index: 999999;
-    position: fixed;
     width: 100%;
     top: 0;
     align-items: center;
@@ -153,7 +152,7 @@ a:hover {
   display: none;
   box-shadow: -1px 5px 15px rgba(0, 0, 0, 0.0901960784);
   top: 0;
-  margin-top: 100px;
+  margin-top: 145px;
 }
 .menu__mobile.active {
   display: block;
@@ -793,5 +792,11 @@ strong {
 @media (max-width: 768px) {
   .err404__image {
     padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #wp-toolbar {
+    display: flex;
   }
 }
