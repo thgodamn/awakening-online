@@ -50,11 +50,11 @@
                 </a>
                 <a href="https://t.me/awaken_supp" target="_blank">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/telegram_icon.png" />
-                    <div>Awakening.online</div>
+                    <div>@awaken_supp</div>
                 </a>
                 <a href="mailto:info@awakening-online.ru" target="_blank">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/email_icon.png" />
-                    <div>Awakening.online</div>
+                    <div>info@awakening-online.ru</div>
                 </a>
             </div>
         </div>
