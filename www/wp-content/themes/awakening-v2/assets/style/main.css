@@ -570,6 +570,11 @@ a:hover {
     margin: 0;
   }
 }
+.footer.absolute {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
 
 .social__item {
   margin-left: 40px;
