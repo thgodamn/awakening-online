@@ -43,7 +43,7 @@ get_header(); ?>
             $add_to_cart = do_shortcode('[add_to_cart_url id="'.$post->ID.'"]');
             echo '/checkout/'.$add_to_cart;
             ?>" class="button desktop">
-                <?php $product = wc_get_product( $post->ID ); echo $product->get_price(); ?> рублей
+                <span class="number black mr"><?php $product = wc_get_product( $post->ID ); echo $product->get_price(); ?></span> рублей
             </a>
 
         </div>
@@ -58,7 +58,7 @@ get_header(); ?>
         $add_to_cart = do_shortcode('[add_to_cart_url id="'.$post->ID.'"]');
         echo '/checkout/'.$add_to_cart;
         ?>" class="button mobile">
-            <?php $product = wc_get_product( $post->ID ); echo $product->get_price(); ?> рублей
+            <span class="number black mr"><?php $product = wc_get_product( $post->ID ); echo $product->get_price(); ?></span> рублей
         </a>
 
 
