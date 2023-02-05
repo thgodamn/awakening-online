@@ -67,8 +67,8 @@
     });
 
     if ($('body').height() < window.outerHeight) {
-        $('.page').css('height',(window.outerHeight-390) + 'px');
-        $('.err404').css('height',(window.outerHeight-390) + 'px');
+        $('.page').css('height',(window.outerHeight-380) + 'px');
+        $('.err404').css('height',(window.outerHeight-380) + 'px');
     }
 
     $(window).scroll(function () {
