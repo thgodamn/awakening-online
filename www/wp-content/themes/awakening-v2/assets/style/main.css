@@ -769,9 +769,6 @@ strong {
   box-sizing: border-box;
 }
 @media (max-width: 768px) {
-  .single {
-    margin-bottom: 100px;
-  }
   .single__wrapper {
     grid-template-columns: 1fr;
   }
