@@ -67,9 +67,9 @@
     //     }
     // });
 
-    if (($('body').height()+200) < window.outerHeight) {
-        $('footer').addClass('absolute');
-    }
+    // if ($('body').height() < window.outerHeight+200) {
+    //     $('footer').addClass('absolute');
+    // }
 
     $(window).scroll(function () {
         if ($('.header__default').offset().top <= $(window).scrollTop()) {
