@@ -5,8 +5,8 @@ require_once __DIR__.'/config.php';
 use ClassApi\AFSession;
 use ClassApi\Lead;
 use ClassApi\Form;
-use \Datetime;
-use \DateTimeZone;
+//use \Datetime;
+//use \DateTimeZone;
 //use PHPMailer\PHPMailer\PHPMailer;
 //use PHPMailer\PHPMailer\SMTP;
 //use PHPMailer\PHPMailer\Exception;
@@ -55,14 +55,25 @@ class Controller
         $form_id = (isset($params['form_id'])) ? $params['form_id']: 1;
         $form_name = (isset($params['form_name'])) ? $params['form_name']: 1;
 
-        $wp_verify_nonce = false;
-        if (!empty($params) && !isset( $params['form_contact_course_nonce'] ) && !wp_verify_nonce( $params['form_contact_course_nonce'], 'form_contact_course' )) {
-            $wp_verify_nonce = true;
-        } elseif (!empty($params) && !isset( $params['form_contact_lead_nonce'] ) && !wp_verify_nonce( $params['form_contact_lead_nonce'], 'form_contact_lead' )) {
-            $wp_verify_nonce = true;
-        } elseif (empty($params)) $wp_verify_nonce = true;
-        if (!$wp_verify_nonce)
-            return;
+//        $wp_verify_nonce = false;
+//        if (!empty($params) && isset( $params['form_contact_course_nonce'] ) && wp_verify_nonce( $params['form_contact_course_nonce'], 'form_contact_course' )) {
+//            $wp_verify_nonce = true;
+//        } elseif (!empty($params) && isset( $params['form_contact_lead_nonce'] ) && wp_verify_nonce( $params['form_contact_lead_nonce'], 'form_contact_lead' )) {
+//            $wp_verify_nonce = true;
+//        }
+//        //elseif (empty($params)) $wp_verify_nonce = true;
+//        if (!$wp_verify_nonce)
+//            return;
+
+//        if ( isset( $_REQUEST[ '_wpnonce' ] ) && wp_verify_nonce( $_REQUEST[ '_wpnonce' ], 'true-nonce' ) ) {
+//
+//            // делаем что-либо
+//
+//        } else {
+//
+//            die( 'Проверка защиты не прошла.' );
+//
+//        }
 
         global $wpdb;
         try {
@@ -81,7 +92,7 @@ class Controller
                 <div>Email: $email,</div>
                 <div>Телефон: $phone,</div>
                 <div>Телеграм: @$telegram,</div>
-                <div class='margin-top: 20px'>Дата (Москва): $now</div>
+                <div class='margin-top: 20px'>Дата (Москва): {$now->format("d-m-Y h:i:s")}</div>
             ";
 
             wp_mail( $to, $subject, $message );
