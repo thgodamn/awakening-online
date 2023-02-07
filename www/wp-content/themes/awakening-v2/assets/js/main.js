@@ -41,7 +41,15 @@
                         console.log('beforeSend');
                     },
                     success:function(data){
-                        console.log(data);
+                        console.log(data['result']);
+                        $(':input', $(this)).not(':button, :submit, :reset, :hidden')
+                            .val('')
+                            .prop('checked', false)
+                            .prop('selected', false);
+
+                        if (data['result'] == 1) {
+                            $(this).children('.contact__result').html('Сообщение успешно отправлено');
+                        }
                     }
                 });
 
@@ -67,9 +75,9 @@
     //     }
     // });
 
-    if (($('body').height()+200) < window.outerHeight) {
-        $('footer').addClass('absolute');
-    }
+    // if ($('body').height() < window.outerHeight+200) {
+    //     $('footer').addClass('absolute');
+    // }
 
     $(window).scroll(function () {
         if ($('.header__default').offset().top <= $(window).scrollTop()) {

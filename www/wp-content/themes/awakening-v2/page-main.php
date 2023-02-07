@@ -320,6 +320,7 @@
                             <div class="contact__button">
                                 <input class="button" type="submit" value="Подобрать">
                             </div>
+                            <div class="contact__result"></div>
 
                             <?php wp_nonce_field( 'form_contact_course', 'form_contact_course_nonce' ); ?>
                             <input type="hidden" name="form_id" value="1" />
@@ -455,6 +456,7 @@
                             <div class="contact__button">
                                 <input class="button" type="submit" value="Оставить заявку">
                             </div>
+                            <div class="contact__result"></div>
 
                             <?php wp_nonce_field( 'form_contact_lead', 'form_contact_lead_nonce' ); ?>
                             <input type="hidden" name="form_id" value="2" />
