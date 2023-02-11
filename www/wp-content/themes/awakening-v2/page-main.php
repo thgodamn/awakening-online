@@ -401,6 +401,9 @@
 
     </section>
 
+    <div class="container mobile mb100">
+        <iframe class="banner__video" src="https://www.youtube.com/embed/egj05L_ipjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; gyroscope" allowfullscreen></iframe>
+    </div>
 
 
 

@@ -695,6 +695,9 @@ strong {
 .mobile {
   display: none;
 }
+.mobile .banner__video {
+  display: block;
+}
 @media (max-width: 768px) {
   .mobile {
     display: flex;
@@ -855,6 +858,22 @@ strong {
   .err404__image {
     padding: 0 20px;
   }
+}
+
+.mb100 {
+  margin-bottom: 100px;
+}
+
+.mb75 {
+  margin-bottom: 75px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
