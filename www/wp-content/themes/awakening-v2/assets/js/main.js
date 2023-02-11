@@ -21,9 +21,56 @@
         });
     });
 
+
+    // $('input[name="phone"]').inputmask({"mask": "+7 (999)-999-9999"});
+    // $('input[name="phone"]').inputmask("99-9999999");
+
+    // $('input[name="phone"]').usPhoneFormat({
+    //     format:'x (xxx) xxx-xxxx'
+    // });
+
     //send lead
     if ($('.js-form').length) {
         $('.js-form').each(function () {
+
+            // $(this).find($('input[name=phone]')).usPhoneFormat({
+            //     format:'(xxx) xxx-xxxx'
+            // });
+
+
+            $(this).find($('input[name=phone]')).inputmask("+7 (999) 999-99-99");
+            $(this).find($('input[name=email]')).inputmask({
+                mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+                greedy: false,
+                onBeforePaste: function (pastedValue, opts) {
+                    pastedValue = pastedValue.toLowerCase();
+                    return pastedValue.replace("mailto:", "");
+                },
+                definitions: {
+                    '*': {
+                        validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+                        cardinality: 1,
+                        casing: "lower"
+                    }
+                }
+            });
+
+            $(this).find($('input[name=telegram]')).inputmask({
+                mask: "@*{1,100}",
+                greedy: false,
+                onBeforePaste: function (pastedValue, opts) {
+                    pastedValue = pastedValue.toLowerCase();
+                    return pastedValue.replace("mailto:", "");
+                },
+                definitions: {
+                    '*': {
+                        validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+                        cardinality: 1,
+                        casing: "lower"
+                    }
+                }
+            });
+
             $(this).submit(function (e) {
 
                 e.preventDefault();
