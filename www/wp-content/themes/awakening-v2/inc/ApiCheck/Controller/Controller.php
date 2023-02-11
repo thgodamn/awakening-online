@@ -91,7 +91,7 @@ class Controller
                 <div>Имя: $name,</div>
                 <div>Email: $email,</div>
                 <div>Телефон: $phone,</div>
-                <div>Телеграм: @$telegram,</div>
+                <div>Телеграм: $telegram,</div>
                 <div class='margin-top: 20px'>Дата (Москва): {$now->format("d-m-Y h:i:s")}</div>
             ";
 
