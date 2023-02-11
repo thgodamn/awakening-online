@@ -42,13 +42,14 @@
                     },
                     success:function(data){
                         console.log(data['result']);
-                        $(':input', $(this)).not(':button, :submit, :reset, :hidden')
+                        console.log(form);
+                        form.find('input').not(':button, :submit, :reset, :hidden')
                             .val('')
                             .prop('checked', false)
                             .prop('selected', false);
 
-                        if (data['result'] == 1) {
-                            $(this).children('.contact__result').html('Сообщение успешно отправлено');
+                        if (data['result'] === 1) {
+                            form.children('.contact__result').html('Сообщение успешно отправлено');
                         }
                     }
                 });
