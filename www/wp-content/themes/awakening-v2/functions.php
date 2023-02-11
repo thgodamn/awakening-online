@@ -108,14 +108,25 @@ function postLead(WP_REST_Request $request) {
     return $controller->postLead($params);
 }
 
-function debug_logg($value)
+//function debug_logg($value)
+//{
+//    $h = fopen("{$_SERVER['DOCUMENT_ROOT']}/debugg.log", 'a');
+//    ob_start();
+//    var_dump($value);
+//    fwrite($h, ob_get_clean());
+//    fwrite($h, "---------------------------------\n");
+//    fclose($h);
+//}
+
+function debug_log($msg, $die = false)
 {
-    $h = fopen("{$_SERVER['DOCUMENT_ROOT']}/debugg.log", 'a');
-    ob_start();
-    var_dump($value);
-    fwrite($h, ob_get_clean());
-    fwrite($h, "---------------------------------\n");
-    fclose($h);
+    $msg = '[ ' . date('Y-m-d H:i:s') . ' ] ' . print_r($msg, true) . PHP_EOL;
+
+    error_log($msg, 3, ABSPATH . '/debug.log');
+
+    if ($die) {
+        die;
+    }
 }
 
 
