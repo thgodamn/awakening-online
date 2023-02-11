@@ -83,6 +83,47 @@ class Controller
 
             $result = $wpdb->query( $wpdb->prepare($query));
 
+            $errors = [];
+
+            if(empty($phone) && empty($email) && empty($telegram) && empty($name) ) {
+                return rest_ensure_response( [
+                    'msg' => "<span>Ошибка!</span> Заполните форму",
+                    'status' => 0,
+                ] );
+            }
+
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($email)) {
+                // invalid emailaddress
+                $errors[] = [
+                    'slug' => 'email',
+                    'text' => 'E-mail',
+                ];
+            }
+
+            if(!preg_match("/^\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}$/", $phone) && !empty($phone) ) {
+                // $phone is invalid
+                $errors[] = [
+                    'slug' => 'phone',
+                    'text' => 'Телефон',
+                ];
+            }
+
+            //формирование ошибки, если email и phone введены неверно
+            if (!empty($errors)) {
+                $error_text = '';
+                $i = 0;
+                foreach ($errors as $error) {
+                    $i++;
+                    $error_text .= $error['text'];
+                    if ($i < sizeof($errors))
+                        $error_text .= ', ';
+                }
+                return rest_ensure_response( [
+                    'msg' => "<span>Ошибка!</span> Введите корректный <span>$error_text</span><br>(или оставьте поле пустым)",
+                    'status' => 0,
+                ] );
+            }
+
             $now = new DateTime( "now", new DateTimeZone( "Europe/Moscow" ) );
             $to = "info@awakening-online.ru";
             $subject = "Новый лид - $name $phone @$telegram";
@@ -96,16 +137,15 @@ class Controller
             ";
 
             wp_mail( $to, $subject, $message );
-
             return rest_ensure_response( [
-                'params' => $params,
-                'result' => $result,
+                'msg' => '<span>Сообщение успешно отравлено</span>',
+                'status' => 1,
             ] );
 
         } catch (Exception $e) {
             return rest_ensure_response( [
-                'msg' => 'Сообщение не было отправлено',
-                'result' => false,
+                'msg' => 'Непредвиденная ошибка! Сообщение не было отправлено',
+                'status' => 0,
             ] );
         }
 

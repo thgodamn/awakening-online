@@ -39,21 +39,21 @@
 
 
             $(this).find($('input[name=phone]')).inputmask("+7 (999) 999-99-99");
-            $(this).find($('input[name=email]')).inputmask({
-                mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
-                greedy: false,
-                onBeforePaste: function (pastedValue, opts) {
-                    pastedValue = pastedValue.toLowerCase();
-                    return pastedValue.replace("mailto:", "");
-                },
-                definitions: {
-                    '*': {
-                        validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
-                        cardinality: 1,
-                        casing: "lower"
-                    }
-                }
-            });
+            // $(this).find($('input[name=email]')).inputmask({
+            //     mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+            //     greedy: false,
+            //     onBeforePaste: function (pastedValue, opts) {
+            //         pastedValue = pastedValue.toLowerCase();
+            //         return pastedValue.replace("mailto:", "");
+            //     },
+            //     definitions: {
+            //         '*': {
+            //             validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+            //             cardinality: 1,
+            //             casing: "lower"
+            //         }
+            //     }
+            // });
 
             $(this).find($('input[name=telegram]')).inputmask({
                 mask: "@*{1,100}",
@@ -77,27 +77,30 @@
                 var form = $(this);
                 var vdata = form.serializeArray();
 
-                console.log(form);
-                console.log(vdata);
+                // console.log(form);
+                // console.log(vdata);
 
                 $.ajax({
                     url: '/wp-json/v1/post/lead',
                     data: vdata, // form data
                     type: form.attr('method'),
                     beforeSend:function(xhr){
-                        console.log('beforeSend');
+                        // console.log('beforeSend');
                     },
                     success:function(data){
-                        console.log(data['result']);
-                        console.log(form);
-                        form.find('input').not(':button, :submit, :reset, :hidden')
-                            .val('')
-                            .prop('checked', false)
-                            .prop('selected', false);
+                        if (data['status'] === 1) {
+                            form.children('.contact__result').removeClass('declined');
+                            form.children('.contact__result').addClass('success');
 
-                        if (data['result'] === 1) {
-                            form.children('.contact__result').html('Сообщение успешно отправлено');
+                            form.find('input').not(':button, :submit, :reset, :hidden')
+                                .val('')
+                                .prop('checked', false)
+                                .prop('selected', false);
+                        } else {
+                            form.children('.contact__result').removeClass('success');
+                            form.children('.contact__result').addClass('declined');
                         }
+                        form.children('.contact__result').html(data['msg']);
                     }
                 });
 
@@ -157,7 +160,7 @@
         });
 
         // Other page
-        console.log(window.location.pathname);
+        // console.log(window.location.pathname);
     }
 
 })( jQuery );

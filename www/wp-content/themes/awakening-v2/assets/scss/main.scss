@@ -585,6 +585,15 @@ a:hover {
     text-align: center;
     width: 100%;
     left: 0;
+    margin-top: 10px;
+
+    //&.declined {
+    //  color: darkred;
+    //}
+    //
+    //&.success {
+    //  color: darkgreen;
+    //}
   }
   &__row {}
   &__label {

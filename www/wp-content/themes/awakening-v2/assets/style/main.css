@@ -485,6 +485,7 @@ a:hover {
   text-align: center;
   width: 100%;
   left: 0;
+  margin-top: 10px;
 }
 .contact__label {
   font-style: normal;
