@@ -577,6 +577,14 @@ a:hover {
   }
   &__form {
     padding: 20px 40px;
+    position: relative;
+  }
+  &__result {
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 0;
   }
   &__row {}
   &__label {

@@ -477,6 +477,14 @@ a:hover {
 }
 .contact__form {
   padding: 20px 40px;
+  position: relative;
+}
+.contact__result {
+  display: block;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
 }
 .contact__label {
   font-style: normal;
