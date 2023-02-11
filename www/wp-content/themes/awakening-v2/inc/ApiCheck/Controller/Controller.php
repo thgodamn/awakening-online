@@ -85,7 +85,7 @@ class Controller
 
             $errors = [];
 
-            if(empty($phone) && empty($email) && empty($telegram) && empty($name) ) {
+            if(empty($phone) && empty($email) && empty($telegram) ) {
                 return rest_ensure_response( [
                     'msg' => "<span>Ошибка!</span> Заполните форму",
                     'status' => 0,
