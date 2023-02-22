@@ -98,7 +98,7 @@
 
                 <div class="banner__box banner__box--flex justify-right">
                     <div class="banner__subtext banner__subtext banner__subtext--center banner__subtext--mr">Awakening курс </div>
-                    <a class="banner__button button button__small" href="/product/awakening/"><span class="number black mr">2850</span> рублей</a>
+                    <a class="banner__button button button__small" href="/product/awakening/"><span class="number black mr">850</span> рублей</a>
                 </div>
 
                 <div class="banner__box banner__box--flex justify-start">
@@ -193,7 +193,7 @@
                         <span>Видеокурс</span>
                     </div>
                     <div class="course__button">
-                        <div class="button"><span class="number black mr">3890</span> рублей</div>
+                        <div class="button"><span class="number black mr">890</span> рублей</div>
                     </div>
                 </a>
 
@@ -211,7 +211,7 @@
                         <span>Видеокурс</span>
                     </div>
                     <div class="course__button">
-                        <div class="button"><span class="number black mr">2850</span> рублей</div>
+                        <div class="button"><span class="number black mr">850</span> рублей</div>
                     </div>
                 </a>
 
