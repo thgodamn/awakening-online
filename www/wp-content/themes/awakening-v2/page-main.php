@@ -98,7 +98,7 @@
 
                 <div class="banner__box banner__box--flex justify-right">
                     <div class="banner__subtext banner__subtext banner__subtext--center banner__subtext--mr">Awakening курс </div>
-                    <a class="banner__button button button__small" href="/product/awakening/"><span class="number black mr">850</span> рублей</a>
+                    <a class="banner__button button button__small" href="/product/awakening/"><span class="number black mr"><?php $product = wc_get_product( 12 ); echo $product->get_price(); ?></span> рублей</a>
                 </div>
 
                 <div class="banner__box banner__box--flex justify-start">
