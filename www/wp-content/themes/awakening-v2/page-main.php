@@ -193,7 +193,7 @@
                         <span>Видеокурс</span>
                     </div>
                     <div class="course__button">
-                        <div class="button"><span class="number black mr">890</span> рублей</div>
+                        <div class="button"><span class="number black mr"><?php $product = wc_get_product( 13 ); echo $product->get_price(); ?></span> рублей</div>
                     </div>
                 </a>
 
@@ -211,7 +211,7 @@
                         <span>Видеокурс</span>
                     </div>
                     <div class="course__button">
-                        <div class="button"><span class="number black mr">850</span> рублей</div>
+                        <div class="button"><span class="number black mr"><?php $product = wc_get_product( 12 ); echo $product->get_price(); ?></span> рублей</div>
                     </div>
                 </a>
 
